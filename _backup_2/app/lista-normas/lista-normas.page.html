@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <div >
+          <ion-row>
+            <ion-col size="2">
+                <ion-back-button></ion-back-button>
+            </ion-col>
+            <ion-col size="8" class="centralizado">
+                <ion-title > <div class="centralizado"> <img src="./assets/mepi_icon.png" style="max-width: 100px;" /> </div> </ion-title>
+            </ion-col>
+            <ion-col size="2">
+            </ion-col>
+          </ion-row>
+        </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content center>
+  <div class="centralizado" style="height: 100%">
+    <ion-card style="background-color: white; width: 80%" >
+    <ion-card-header style="background-color: #a5a2a2; margin-bottom: 10px">
+      <ion-card-title class="label-card-text">NORMAS</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item *ngFor="let norma of data" (click)="openDetailsWithState('/normas',norma)">
+          <div class="label-atencao">{{norma.n_norma}}</div> <div class="label-item">{{norma.titulo}}</div>
+      </ion-item>
+    </ion-card-content>
+    </ion-card>
+  </div>
+  </ion-content>

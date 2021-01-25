@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <div >
+        <ion-row>
+          <ion-col size="1">
+              <ion-back-button></ion-back-button>
+          </ion-col>
+          <ion-col size="10" class="centralizado">
+              <ion-title > <div class="centralizado"> <img src="./assets/mepi_icon.png" style="max-width: 100px;" /> </div> </ion-title>
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content center>
+  <div class="label-card-text" style="font-size: 20px;
+  font-weight: bold;
+  color: #a42a31;
+  margin-top: 26px;
+  margin-bottom: 26px;">CATÁLOGOS DE PRODUTOS</div>
+  
+  <div *ngFor="let catalogo of data" (click)="openDetailsWithState('/catalogo',catalogo.IFRAME, catalogo.PRODUTOS)" >
+    <div style="margin-top: 20px;display:flex;justify-content:center;flex-direction: column;align-items: center;    width: 100%;">
+      <ion-row > <img style="max-width: 300px;width: 100%;box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;" src="{{catalogo.LINK_IMG}}" /></ion-row>
+       <ion-row ><div class="label-item" style="padding: 11px;font-size: 17px;font-weight: bold;color: #70bd52;">{{catalogo.TITULO}}</div></ion-row>
+
+    </div>
+    
+  </div>
+
+  <div class="centralizado-web" style="height: 100%">
+    <ion-card style="background-color: white; width: 80%" >
+    <ion-card-header style="background-color: #a5a2a2; margin-bottom: 10px">
+      <ion-card-title class="label-card-text">CATÁLOGOS DE PRODUTOS</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     
+    </ion-card-content>
+    </ion-card>
+  </div>
+  </ion-content>

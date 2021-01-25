@@ -1,0 +1,116 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.card-noticia{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.centralizado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-icon{
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5d5f61;
+}
+
+.background-primary {
+    background-color:#A42A31;
+}
+
+.background-secondary {
+    background-color:#D9D9D9;
+}
+
+.label-contato{
+    color:#ffff;
+    font-weight: bold;
+
+}
+
+.label-noticias{
+    color: #575859;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.label-desc{
+    color: #575859;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.label-info{
+    color: #575859;
+    font-weight: bold;
+}
+
+.label-ver-mais-noticias{
+    font-weight: bold;
+    margin-left: 10px;
+    color: #a42a31;
+}
+
+.row-noticias{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 10px;
+}
+
+.label-card-text{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+ion-content{
+
+    --ion-background-color:#E9E9E9;
+}
+
+ion-item{
+    --ion-background-color:#fff;
+ }
+
+.label-atencao{
+    margin-right: 10px;
+    background-color: #a42a31;
+    padding: 5px;
+    border-radius: 7px;
+    font-weight: bold;
+    color: white;
+}
+
+.label-item{
+   font-weight: 400;
+   color:#3b3b3c;
+}

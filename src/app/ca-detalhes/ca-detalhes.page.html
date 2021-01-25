@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <div >
+          <ion-row>
+            <ion-col size="1">
+                <ion-back-button></ion-back-button>
+            </ion-col>
+            <ion-col size="10" class="centralizado">
+                <ion-title > <div class="centralizado"> <img src="./assets/mepi_icon.png" style="max-width: 100px;" /> </div> </ion-title>
+            </ion-col>
+            <ion-col size="1">
+            </ion-col>
+          </ion-row>
+        </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content center>
+  <div class="centralizado" style="height: 100%">
+    <ion-card style="background-color: white; width: 90%" >
+      <ion-card-header style="background-color: #a5a2a2; margin-bottom: 10px">
+        <ion-card-title class="label-card-text" *ngIf="dataRota.codCa">CA - {{dataRota.codCa}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+      <ion-row>
+        <div class="label-item" style="font-size: 18px"  *ngIf="dataRota.ca.Referencia">{{dataRota.ca.Referencia}}
+        </div>
+      </ion-row>
+      <br>
+
+      <ion-row>
+        <ion-col size="6" style="text-align: left"><span class="label-info" *ngIf="dataRota.ca.Natureza">Natureza: </span>{{dataRota.ca.Natureza}}</ion-col>
+        <ion-col size="6" style="text-align: right"><span class="label-info" *ngIf="dataRota.ca.RazaoSocial"> Razão Social:</span>{{dataRota.ca.RazaoSocial}}</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6" style="text-align: left"><span class="label-info" *ngIf="dataRota.ca.CNPJ">CNPJ:</span> {{dataRota.ca.CNPJ}}</ion-col>
+        <ion-col size="6" style="text-align: right"><span class="label-info" *ngIf="dataRota.ca.Situacao">Status:</span> {{dataRota.ca.Situacao}}</ion-col>
+      </ion-row>
+      <br>
+      <p style="text-align: justify" *ngIf="dataRota.ca.AprovadoParaLaudo">
+          {{dataRota.ca.AprovadoParaLaudo}}
+      </p>
+      <br>
+
+      <div class="label-atencao" style="max-width: 25%" *ngIf="dataRota.ca.Norma">{{dataRota.ca.Norma}}</div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  </ion-content>

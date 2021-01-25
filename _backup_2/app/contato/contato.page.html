@@ -1,0 +1,160 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <div >
+          <ion-row>
+            <ion-col size="1">
+                <ion-back-button></ion-back-button>
+            </ion-col>
+            <ion-col size="10" class="centralizado">
+                <ion-title > <div class="centralizado"> <img src="./assets/mepi_icon.png" style="max-width: 100px;" /> </div> </ion-title>
+            </ion-col>
+            <ion-col size="1">
+            </ion-col>
+          </ion-row>
+        </div>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content center>
+  <div class="centralizado" >
+    <ion-card style="background-color: white; width: 80%" >
+    <ion-card-header style="background-color: #a5a2a2; margin-bottom: 10px">
+      <ion-card-title class="label-card-text">AREA DO CLIENTE</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item style="background-color: white">
+        <ion-input name="name" type="text" placeholder="Nome" ngModel required > </ion-input>
+      </ion-item>
+      <ion-item style="background-color: white">
+        <ion-input name="email" type="email" placeholder="Email" ngModel required > </ion-input>
+      </ion-item>
+      <ion-item style="background-color: white">
+        <ion-input name="telefone" type="tel" placeholder="Celular" ngModel required > </ion-input>
+      </ion-item>
+      <ion-item style="background-color: white">
+       <ion-input name="empresa" type="text" placeholder="Empresa" ngModel required > </ion-input>
+      </ion-item>
+      <ion-item style="background-color: white">
+       <ion-input name="empresa" type="text" placeholder="Cidade" ngModel required > </ion-input>
+      </ion-item>
+      
+  <ion-item>
+    <ion-label>Estado</ion-label>
+    <ion-select value="brown" okText="Ok" cancelText="Cancelar">
+      <ion-select-option value="brown">Minas Gerais</ion-select-option>
+      <ion-select-option value="blonde">São Paulo</ion-select-option>
+      <ion-select-option value="black">Bahia</ion-select-option>
+      <ion-select-option value="red">Santa Catarina</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-label position="floating">O que deseja saber?</ion-label>
+      <ion-textarea
+        
+        value="">
+      </ion-textarea>
+    </ion-item>
+     
+      
+      <ion-row  class="centralizado" style="margin:20px">
+        <div class="centralizado">
+            <ion-button color="primary">Enviar</ion-button>
+        </div>
+      </ion-row>
+    </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+<ion-footer >
+    <div></div>
+    <ion-toolbar color="secondary" style="padding: 8px" >
+      
+
+      <div>
+          
+              <div  style="font-size: 9px;border-bottom: 1px solid white; padding-bottom: 8px;">
+                  <ion-row style="width: 100%">
+                      <ion-col size="7">
+                          Rua Dr. Roberto Camilo, 75 
+                      </ion-col>
+                      <ion-col size="5" style="text-align: right">
+                        CEP: 38.041-016
+                      </ion-col>
+                  </ion-row>
+          
+                  <ion-row style="width: 100%">
+                      <ion-col size="7">
+                          Uberaba/MG
+                      </ion-col>
+                      <ion-col size="5" style="text-align: right">
+                          (34) 3313.8569
+                      </ion-col>
+                  </ion-row>
+              </div> 
+        
+        
+
+      </div>
+
+      <div >
+          
+          <div  style="font-size: 9px;border-bottom: 1px solid white; padding-bottom: 8px; ">
+              <ion-row style="width: 100%">
+                  <ion-col size="7">
+                      Rua Dr. Roberto Camilo, 75 
+                  </ion-col>
+                  <ion-col size="5" style="text-align: right">
+                    CEP: 38.041-016
+                  </ion-col>
+              </ion-row>
+      
+              <ion-row style="width: 100%">
+                  <ion-col size="7">
+                      Uberaba/MG
+                  </ion-col>
+                  <ion-col size="5" style="text-align: right">
+                      (34) 3313.8569
+                  </ion-col>
+              </ion-row>
+          </div> 
+    
+    
+
+  </div>
+
+  <div >
+          
+      <div  style="font-size: 9px;">
+          <ion-row style="width: 100%">
+              <ion-col size="7">
+                  Rua Dr. Roberto Camilo, 75 
+              </ion-col>
+              <ion-col size="5" style="text-align: right">
+                CEP: 38.041-016
+              </ion-col>
+          </ion-row>
+  
+          <ion-row style="width: 100%">
+              <ion-col size="7">
+                  Uberaba/MG
+              </ion-col>
+              <ion-col size="5" style="text-align: right">
+                  (34) 3313.8569
+              </ion-col>
+          </ion-row>
+      </div> 
+
+
+
+</div>
+      
+        
+
+       
+      
+
+    </ion-toolbar>
+  </ion-footer>

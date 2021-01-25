@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <div >
+        <ion-row>
+          <ion-col size="1">
+              <ion-back-button></ion-back-button>
+          </ion-col>
+          <ion-col size="10" class="centralizado">
+              <ion-title > <div class="centralizado"> <img src="./assets/mepi_icon.png" style="max-width: 100px;" /> </div> </ion-title>
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content center>
+<div class="centralizado" style="height: 100%">
+  <ion-card style="background-color: white; width: 80%" >
+  <ion-card-header style="background-color: #a5a2a2; margin-bottom: 10px">
+    <ion-card-title class="label-card-text">{{data.titulo}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item (click)="openDetailsWithState('/subservicos','1', 'Linha de Vida')">
+      Ítem 1
+    </ion-item>
+
+    <ion-item (click)="openDetailsWithState('/subservicos','1', 'Linha de Vida')" >
+      Ítem 2
+    </ion-item>
+
+    <ion-item (click)="openDetailsWithState('/subservicos','1', 'Linha de Vida')">
+      Ítem 3
+    </ion-item>
+
+    <ion-item lines="none" (click)="openDetailsWithState('/servicos','1', 'Linha de Vida')">
+      ítem 4
+    </ion-item>
+    
+    
+  </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
+

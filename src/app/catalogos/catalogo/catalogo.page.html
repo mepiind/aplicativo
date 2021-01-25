@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <div >
+        <ion-row>
+          <ion-col size="1">
+              <ion-back-button></ion-back-button>
+          </ion-col>
+          <ion-col size="10" class="centralizado">
+              <ion-title > <div class="centralizado"> <img src="./assets/mepi_icon.png" style="max-width: 100px;" /> </div> </ion-title>
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div [innerHTML]="domSanitizer.bypassSecurityTrustHtml(iframe)">teste</div>
+  <div style="padding: 21px;
+  font-weight: bold;
+  font-size: 20px;
+  background: #a42a31;
+  color: white;" *ngIf="produtos.lenght > 0">Veja os produtos detalhados deste catálogo:</div>
+  <div *ngFor="let produto of produtos" style="padding: 15px;text-decoration: underline;color: #44af17;" (click)="openDetailsWithState('/produto', produto)" >{{produto.DESCRICAO}}</div>
+</ion-content>

@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <div >
+        <ion-row>
+          <ion-col size="2">
+              <ion-back-button></ion-back-button>
+          </ion-col>
+          <ion-col size="8" class="centralizado">
+              <ion-title > <div class="centralizado"> <img src="./assets/mepi_icon.png" style="max-width: 100px;" /> </div> </ion-title>
+          </ion-col>
+          <ion-col size="2">
+          </ion-col>
+        </ion-row>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content center>
+
+  <div class="ion-padding" style="background-color: white"   *ngIf="data.length > 0">
+    <div class="label-card-text" style="font-size: 20px;
+    font-weight: bold;
+    color: #a42a31;
+    margin-top: 26px;
+    margin-bottom: 26px;">SERVIÇOS</div>
+    <ion-row>
+
+      <ion-col size="4" *ngFor="let menu of data" style="    padding-top: 10px;     display: flex;
+      justify-content: center;
+      align-items: center;"  >
+        <div  (click)="recarregaMenu(menu.DESCRICAO , menu.CATEGORIA)">
+          <img src="{{menu.ICONE}}" style="width: 100%; max-width: 100px;"/>
+          <div class="label-icon" style="    margin: 20px 0px;"> {{menu.DESCRICAO}}</div>
+        </div>
+      </ion-col>
+  </ion-row>
+</div>
+
+
+
+
+
+<div class="centralizado-web" style="height: 100%" *ngIf="produtoControle.length > 0">
+  <ion-card style="background-color: white; width: 80%">
+  <ion-card-header style="background-color: #a5a2a2;">
+    <ion-card-title class="label-card-text">
+      <ion-row>
+        <ion-col size="1" ><ion-icon ios="ios-arrow-back" md="md-arrow-back"  (click)="voltaMenu()"></ion-icon></ion-col>
+        <ion-col size="10">{{titulo}}</ion-col>
+        <ion-col size="1"></ion-col>
+     </ion-row>
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content  >
+    <div >
+      <div *ngFor="let produto of produtoControle  let even = even; let odd = odd"  style="    padding-top: 10px">
+        <div  (click)="carregaProduto('/produto',produto)" style="width: 100%;background: white;text-align: left;">
+          <div *ngIf="produto.LINK_FOTO != null">
+            <ion-row  style="border: 1px solid #a5a2a2;border-radius: 6px 6px 0px 0px;"  [ngClass]="even? 'produto-impar' : 'produto-par'" style="border-radius: 0px 0px 6px 6px;">
+              <ion-col size="3"  class="centralizado" >
+                <img src="{{produto.LINK_FOTO}}" style="width:100%; max-width:100px">
+              </ion-col>
+              <ion-col size="9" class="centralizado" style="    justify-content: end;" >
+                <div>{{produto.DESCRICAO}}</div>
+              </ion-col>
+            </ion-row>
+          
+      
+          </div>
+          <div *ngIf="produto.LINK_FOTO == null" [ngClass]="even? 'produto-impar' : 'produto-par'" style="padding:5px">
+            {{produto.DESCRICAO}}
+          </div>
+        </div>
+      </div>
+    </div>
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>

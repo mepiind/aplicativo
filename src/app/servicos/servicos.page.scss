@@ -1,0 +1,25 @@
+.produto-par{
+  background-color: #a5a2a2;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.produto-impar{
+  background-color: #ddddde;
+    color: #575859;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+//put it in your page.scss for what page you want
+ion-content{
+  --ion-background-color:#fff;
+  background-color: white !important;
+  }
+
+  .inner-scroll{
+    background-color: white;
+  }
+
+  
