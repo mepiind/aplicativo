@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { ApiService } from '../services/api.service';
+import { InAppBrowser,InAppBrowserOptions  } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-lista-normas',
@@ -11,7 +12,17 @@ export class ListaNormasPage implements OnInit {
 
   public data:any = null;
 
-  constructor(private router: Router,public apiService: ApiService) {
+  options : InAppBrowserOptions = {
+    location : 'no',//Or 'no'
+    hidden : 'no', //Or  'yes'
+    clearcache : 'yes',
+    clearsessioncache : 'yes',
+    zoom : 'yes',//Android only ,shows browser zoom controls
+    shouldPauseOnSuspend : 'no' //Android only
+
+};
+
+  constructor(private router: Router,public apiService: ApiService, private theInAppBrowser: InAppBrowser) {
     var rota ='normas';
       apiService.acessorGet( rota,function(resp,este){
         console.log(resp);
@@ -19,6 +30,11 @@ export class ListaNormasPage implements OnInit {
       },null,this);//fim do remsoto*/
 
   }
+
+  public openWithSystemBrowser(url : string){
+    let target = "_system";
+    this.theInAppBrowser.create(url,target,this.options);
+}
 
   ngOnInit() {
   }
